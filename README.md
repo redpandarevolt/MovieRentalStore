@@ -1,2 +1,2 @@
 # MovieRentalStore
-### Summer 2019, data structures, algorithms and discrete mathematics II
+### Summer 2019 Data Structures, Algorithms, and Discrete Mathematics II, UW Bothell
