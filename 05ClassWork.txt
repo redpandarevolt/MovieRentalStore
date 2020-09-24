@@ -1,0 +1,101 @@
+.headers on
+.mode column
+.print
+.print Marcela Gomez, Yu-Chi Chen "Jay"
+.print Classwork 05
+.print
+.print #1
+.print 
+
+INSERT into Employee (name, phone, homePhone)
+VALUES ('FarQuar', 9876, 3333);
+
+.print
+.print #2
+.print
+
+Select * FROM Employee;
+
+
+.print
+.print #3
+.print
+INSERT INTO Employee (name, phone) 
+VALUES ('Amy', 5555),('Bert', 8675309);
+
+.print
+.print #4
+.print
+
+SELECT Id, name, phone, homePhone
+FROM Employee
+WHERE name IN ( 'Amy', 'Bert', 'FarQuar');
+
+.print
+.print #5
+.print
+
+UPDATE Employee
+SET name = 'AMY', phone = 4444
+WHERE phone = 5555;
+
+UPDATE Employee
+SET phone = 4444
+WHERE name = 'AMY';
+
+.print
+.print #6
+.print
+
+SELECT Id, name, phone, homePhone
+FROM Employee
+WHERE name IN ( 'Amy', 'Bert', 'FarQuar');
+
+-- or second solution use * to include all rows
+
+SELECT *
+FROM Employee
+WHERE name IN ( 'Amy', 'Bert', 'FarQuar');
+
+.print
+.print #7
+.print
+
+INSERT into Attendees (meetingId, employeeId)
+VALUES (108, 16);
+
+
+.print
+.print #8
+.print
+
+SELECT *
+FROM Employee, Meeting
+WHERE employee.name = 'FarQuar';
+
+.print
+.print #9
+.print
+
+DELETE from Employee WHERE Employee.ID = 17;
+
+.print
+.print #10
+.print
+
+DELETE from Employee WHERE Employee.name = 'Bert';
+
+.print
+.print #11
+.print
+
+INSERT INTO ATTENDEES(meetingId, employeeId )
+	SELECT 116, Attendees.employeeId  
+	FROM Attendees 
+	WHERE MeetingId = 111;
+
+
+SELECT Employee.name, Meeting.Id, Meeting.purpose
+FROM Employee, Attendees, Meeting
+WHERE Meeting.Id = 116 AND Meeting.purpose = 'Post Mortem' AND Meeting.Id = Attendees.meetingId AND Employee.ID = Attendees.employeeId;
+

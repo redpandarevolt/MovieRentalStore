@@ -1,0 +1,299 @@
+Last login: Mon Aug 19 19:56:46 on console
+marcelas-MBP:~ marcelagomez$ ssh chela@uw1-320-04.uwb.edu
+chela@uw1-320-04.uwb.edu's password: 
+Linux uw1-320-04 4.9.0-9-amd64 #1 SMP Debian 4.9.168-1+deb9u4 (2019-07-19) x86_64
+
+
+                     For use by authorized users only.
+                    NOT FOR COMMERCIAL OR PERSONAL USE.
+  Policy on privacy and monitoring: www.washington.edu/computing/rules.html
+
+Notice:
+    The server does not maintain your data, so please make a back up
+    by invoking udrive or cloud storage
+
+How to make  a backup:
+    Save your data into the UDRIVE (~/U, $HOME/U)
+      - cd ~/U <- location of your cloud storage
+    
+
+
+Last login: Mon Jul 29 20:49:02 2019 from 10.102.16.64
+[21:12:57] chela@uw1-320-04: ~ $ ls
+outputP3.txt  U
+[21:16:58] chela@uw1-320-04: ~ $ cd U
+[21:17:03] chela@uw1-320-04: ~/U $ ls
+css342                  p3          slist_incompleteP4.cpp.h
+deque_incomplete.cpp.h  polynomial  uwbcourses
+[21:17:04] chela@uw1-320-04: ~/U $ cd uwbcourses
+[21:17:15] chela@uw1-320-04: ~/U/uwbcourses $ ls
+CSS332  CSS342  css343
+[21:17:16] chela@uw1-320-04: ~/U/uwbcourses $ cd css343
+[21:17:31] chela@uw1-320-04: ~/U/uwbcourses/css343 $ ls
+poly
+[21:17:33] chela@uw1-320-04: ~/U/uwbcourses/css343 $ mkdir movie
+[21:21:04] chela@uw1-320-04: ~/U/uwbcourses/css343 $ ls
+movie  poly
+[21:21:07] chela@uw1-320-04: ~/U/uwbcourses/css343 $ cs movie
+-bash: cs: command not found
+[21:21:13] chela@uw1-320-04: ~/U/uwbcourses/css343 $ cd movie
+[21:21:19] chela@uw1-320-04: ~/U/uwbcourses/css343/movie $ script movieOutPut.txt
+Script started, file is movieOutPut.txt
+[21:22:27] chela@uw1-320-04: /home/UDRIVE/chela/uwbcourses/css343/movie $ g++ -std=c++14 -g -Wall -Wextra *.cpp -o moviestore
+Customer.cpp: In member function ‘void Customer::printHistory()’:
+Customer.cpp:68:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int i = 0; i < rentalHistory.size(); i++)
+                         ~~^~~~~~~~~~~~~~~~~~~~~~
+Customer.cpp: In member function ‘void Customer::printCustomer(std::ostream&) const’:
+Customer.cpp:81:44: warning: unused parameter ‘outStream’ [-Wunused-parameter]
+ void Customer::printCustomer(std::ostream& outStream) const {
+                                            ^~~~~~~~~
+HashTable.cpp: In member function ‘void HashTable::makeEmpty()’:
+HashTable.cpp:138:35: warning: deleting object of polymorphic class type ‘Customer’ which has non-virtual destructor might cause undefined behavior [-Wdelete-non-virtual-dtor]
+                 delete customers[i];
+                                   ^
+HashTable.cpp: In member function ‘bool HashTable::retrieveCustomer(int, Customer*&)’:
+HashTable.cpp:126:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+History.cpp: In constructor ‘History::History(std::__cxx11::string)’:
+History.cpp:15:30: warning: unused parameter ‘str’ [-Wunused-parameter]
+ History::History(std::string str) {}
+                              ^~~
+Movie.cpp: In member function ‘bool Movie::setDirector(std::__cxx11::string)’:
+Movie.cpp:144:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Movie.cpp: In function ‘std::ostream& operator<<(std::ostream&, const Movie&)’:
+Movie.cpp:227:61: warning: unused parameter ‘mov’ [-Wunused-parameter]
+ std::ostream &operator<<(std::ostream &output, const Movie &mov)
+                                                             ^~~
+Transaction.cpp: In member function ‘virtual void Transaction::processTransaction(Store&)’:
+Transaction.cpp:96:45: warning: unused parameter ‘store’ [-Wunused-parameter]
+ void Transaction::processTransaction(Store &store){}
+                                             ^~~~~
+[21:23:57] chela@uw1-320-04: /home/UDRIVE/chela/uwbcourses/css343/movie $ ./moviestore
+Invalid Selection: No such type of movie!
+Invalid Selection: No such type of movie!
+Invalid transaction type: X
+Invalid transaction type: Z
+ERROR: Wrong media type: Z
+Comedies:
+F 10 Woody Allen Annie Hall 1977
+F 10 Joel Coen Fargo 1996
+F 10 John Landis National Lampoon's Animal House 1978
+F 10 Gore Verbinski Pirates of the Caribbean 2003
+F 10 Nora Ephron Sleepless in Seattle 1993
+F 10 Rob Reiner When Harry Met Sally 1989
+F 10 Nora Ephron You've Got Mail 1998
+Drama:
+D 10 Barry Levinson Good Morning Vietnam 1988
+D 10 Clint Eastwood Unforgiven 1992
+D 10 Gus Van Sant Good Will Hunting 2000
+D 10 Jonathan Demme Silence of the Lambs 1991
+D 10 Nancy Savoca Dogfight 1991
+D 10 Phillippe De Broca King of Hearts 1967
+D 10 Steven Spielberg Schindler's List 1993
+Classics:
+C 10 George Cukor Holiday 1938
+C 10 George Cukor Holiday 1938
+C 10 Victor Fleming Gone With the Wind 1939
+C 10 Victor Fleming Gone With the Wind 1939
+C 10 Victor Fleming The Wizard of Oz 1939
+C 10 George Cukor The Philadelphia Story 1940
+C 10 George Cukor The Philadelphia Story 1940
+C 10 John Huston The Maltese Falcon 1941
+C 10 Michael Curtiz Casablanca 1942
+C 10 Michael Curtiz Casablanca 1942
+C 10 Frank Capra It's a Wonderful Life 1946
+C 10 Frank Capra It's a Wonderful Life 1946
+C 10 Stanley Kubrick A Clockwork Orange 1971
+C 10 Hal Ashby Harold and Maude 1971
+Customers:
+4444 Moose Bullwinkle 
+6666 Donkey Darrell 
+8888 Pig Porky 
+9000 Lizard Larry 
+5000 Frog Freddie 
+1000 Mouse Minnie 
+1111 Mouse Mickey 
+3333 Witch Wicked 
+7777 Spider Sammy 
+9999 Duck Daffy 
+8000 Wacky Wally 
+2000 Duck Donald 
+Customer Transaction: 
+I
+B 8000 D F You've Got Mail, 1998
+B 1000 D D Barry Levinson, Good Morning Vietnam,
+B 1000 D C 5 1940 Katherine Hepburn
+B 2000 D F Sleepless in Seattle, 1993
+B 4444 D C 2 1971 Malcolm McDowell
+B 5000 D C 3 1971 Ruth Gordon
+R 5000 D C 3 1971 Ruth Gordon
+B 8888 D F Annie Hall, 1977
+B 1111 D C 2 1971 Malcolm McDowell
+B 1111 D Z 2 1971 Malcolm McDowell
+B 5000 D C 3 1971 Ruth Gordon
+R 5000 D C 3 1971 Ruth Gordon
+B 1000 D D Gus Van Sant, Good Will Hunting,
+B 2000 D D Phillippe De Broca, King of Hearts,
+R 4444 D C 2 1971 Malcolm McDowell
+B 1000 D C 5 1940 Cary Grant
+B 1111 D C 3 1971 Ruth Gordon
+B 1000 D C 3 1971 Ruth Gordon
+B 8888 D F When Harry Met Sally, 1989
+B 8888 D D Jonathan Demme, Silence of the Lambs,
+R 8000 D F You've Got Mail, 1998
+B 9999 D F You've Got Mail, 1998
+B 8000 D C 3 1971 Ruth Gordon
+B 1111 D C 10 1941 Humphrey Bogart
+B 8000 D C 3 1971 Ruth Gordon
+B 1111 D C 9 1938 Cary Grant
+B 5000 D C 3 1971 Ruth Gordon
+B 8888 D D Nancy Savoca, Dogfight,
+B 7777 D D Steven Spielberg, Schindler's List,
+R 5000 D C 3 1971 Ruth Gordon
+B 5000 D C 3 1971 Ruth Gordon
+B 8000 D F National Lampoon's Animal House, 1978
+B 8888 D C 3 1971 Ruth Gordon
+B 7777 D C 3 1971 Ruth Gordon
+B 2000 D C 3 1971 Ruth Gordon
+B 2000 D D Nancy Savoca, Dogfight,
+B 9000 D D Clint Eastwood, Unforgiven,
+B 9000 D F Fargo, 1996
+B 1234 D C 2 1971 Malcolm McDowell
+B 1000 D F Bogus Title, 2001
+B 1000 Z F Fargo, 1996
+B 2000 D C 3 1971 Ruth Gordon
+B 9000 D C 3 1971 Ruth Gordon
+B 9000 D C 3 1971 Ruth Gordon
+B 3333 D C 3 1971 Ruth Gordon
+B 7777 D C 3 1971 Ruth Gordon
+B 1000 D D Steven Spielberg, Bogus Title,
+I
+
+[21:24:23] chela@uw1-320-04: /home/UDRIVE/chela/uwbcourses/css343/movie $ valgrind ./moviestore
+==29301== Memcheck, a memory error detector
+==29301== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==29301== Using Valgrind-3.12.0.SVN and LibVEX; rerun with -h for copyright info
+==29301== Command: ./moviestore
+==29301== 
+Invalid Selection: No such type of movie!
+Invalid Selection: No such type of movie!
+Invalid transaction type: X
+Invalid transaction type: Z
+ERROR: Wrong media type: Z
+Comedies:
+F 10 Woody Allen Annie Hall 1977
+F 10 Joel Coen Fargo 1996
+F 10 John Landis National Lampoon's Animal House 1978
+F 10 Gore Verbinski Pirates of the Caribbean 2003
+F 10 Nora Ephron Sleepless in Seattle 1993
+F 10 Rob Reiner When Harry Met Sally 1989
+F 10 Nora Ephron You've Got Mail 1998
+Drama:
+D 10 Barry Levinson Good Morning Vietnam 1988
+D 10 Clint Eastwood Unforgiven 1992
+D 10 Gus Van Sant Good Will Hunting 2000
+D 10 Jonathan Demme Silence of the Lambs 1991
+D 10 Nancy Savoca Dogfight 1991
+D 10 Phillippe De Broca King of Hearts 1967
+D 10 Steven Spielberg Schindler's List 1993
+Classics:
+C 10 George Cukor Holiday 1938
+C 10 George Cukor Holiday 1938
+C 10 Victor Fleming Gone With the Wind 1939
+C 10 Victor Fleming Gone With the Wind 1939
+C 10 Victor Fleming The Wizard of Oz 1939
+C 10 George Cukor The Philadelphia Story 1940
+C 10 George Cukor The Philadelphia Story 1940
+C 10 John Huston The Maltese Falcon 1941
+C 10 Michael Curtiz Casablanca 1942
+C 10 Michael Curtiz Casablanca 1942
+C 10 Frank Capra It's a Wonderful Life 1946
+C 10 Frank Capra It's a Wonderful Life 1946
+C 10 Stanley Kubrick A Clockwork Orange 1971
+C 10 Hal Ashby Harold and Maude 1971
+Customers:
+4444 Moose Bullwinkle 
+6666 Donkey Darrell 
+8888 Pig Porky 
+9000 Lizard Larry 
+5000 Frog Freddie 
+1000 Mouse Minnie 
+1111 Mouse Mickey 
+3333 Witch Wicked 
+7777 Spider Sammy 
+9999 Duck Daffy 
+8000 Wacky Wally 
+2000 Duck Donald 
+Customer Transaction: 
+I
+B 8000 D F You've Got Mail, 1998
+B 1000 D D Barry Levinson, Good Morning Vietnam,
+B 1000 D C 5 1940 Katherine Hepburn
+B 2000 D F Sleepless in Seattle, 1993
+B 4444 D C 2 1971 Malcolm McDowell
+B 5000 D C 3 1971 Ruth Gordon
+R 5000 D C 3 1971 Ruth Gordon
+B 8888 D F Annie Hall, 1977
+B 1111 D C 2 1971 Malcolm McDowell
+B 1111 D Z 2 1971 Malcolm McDowell
+B 5000 D C 3 1971 Ruth Gordon
+R 5000 D C 3 1971 Ruth Gordon
+B 1000 D D Gus Van Sant, Good Will Hunting,
+B 2000 D D Phillippe De Broca, King of Hearts,
+R 4444 D C 2 1971 Malcolm McDowell
+B 1000 D C 5 1940 Cary Grant
+B 1111 D C 3 1971 Ruth Gordon
+B 1000 D C 3 1971 Ruth Gordon
+B 8888 D F When Harry Met Sally, 1989
+B 8888 D D Jonathan Demme, Silence of the Lambs,
+R 8000 D F You've Got Mail, 1998
+B 9999 D F You've Got Mail, 1998
+B 8000 D C 3 1971 Ruth Gordon
+B 1111 D C 10 1941 Humphrey Bogart
+B 8000 D C 3 1971 Ruth Gordon
+B 1111 D C 9 1938 Cary Grant
+B 5000 D C 3 1971 Ruth Gordon
+B 8888 D D Nancy Savoca, Dogfight,
+B 7777 D D Steven Spielberg, Schindler's List,
+R 5000 D C 3 1971 Ruth Gordon
+B 5000 D C 3 1971 Ruth Gordon
+B 8000 D F National Lampoon's Animal House, 1978
+B 8888 D C 3 1971 Ruth Gordon
+B 7777 D C 3 1971 Ruth Gordon
+B 2000 D C 3 1971 Ruth Gordon
+B 2000 D D Nancy Savoca, Dogfight,
+B 9000 D D Clint Eastwood, Unforgiven,
+B 9000 D F Fargo, 1996
+B 1234 D C 2 1971 Malcolm McDowell
+B 1000 D F Bogus Title, 2001
+B 1000 Z F Fargo, 1996
+B 2000 D C 3 1971 Ruth Gordon
+B 9000 D C 3 1971 Ruth Gordon
+B 9000 D C 3 1971 Ruth Gordon
+B 3333 D C 3 1971 Ruth Gordon
+B 7777 D C 3 1971 Ruth Gordon
+B 1000 D D Steven Spielberg, Bogus Title,
+I
+
+==29301== 
+==29301== HEAP SUMMARY:
+==29301==     in use at exit: 28,979 bytes in 167 blocks
+==29301==   total heap usage: 765 allocs, 598 frees, 185,914 bytes allocated
+==29301== 
+==29301== LEAK SUMMARY:
+==29301==    definitely lost: 14,096 bytes in 49 blocks
+==29301==    indirectly lost: 14,883 bytes in 118 blocks
+==29301==      possibly lost: 0 bytes in 0 blocks
+==29301==    still reachable: 0 bytes in 0 blocks
+==29301==         suppressed: 0 bytes in 0 blocks
+==29301== Rerun with --leak-check=full to see details of leaked memory
+==29301== 
+==29301== For counts of detected and suppressed errors, rerun with: -v
+==29301== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+[21:24:58] chela@uw1-320-04: /home/UDRIVE/chela/uwbcourses/css343/movie $ exit
+Script done, file is movieOutPut.txt
+[21:25:06] chela@uw1-320-04: ~/U/uwbcourses/css343/movie $ 
